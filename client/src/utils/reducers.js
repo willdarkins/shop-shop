@@ -16,7 +16,7 @@ import {
         };
   
       // if it's none of these actions, do not update state at all and keep things the same!
-      // This is in case we accidentally execute an action that isn't predefined.
+      // This is in case we accidentally execute an action that isn't predefined
       default:
         return state;
     }

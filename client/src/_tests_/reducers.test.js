@@ -26,3 +26,16 @@ const initialState = {
     expect(newState.products.length).toBe(2);
     expect(initialState.products.length).toBe(0);
   });
+
+
+//This one is very similar to UPDATE_PRODUCTS, but it will be used to test how we can update the categories array
+    //We now want to execute the UPDATE_CATEGORIES action and update our category list to be a new array of categories.
+  test('UPDATE_CATEGORIES', () => {
+    let newState = reducer(initialState, {
+      type: UPDATE_CATEGORIES,
+      categories: [{}, {}]
+    });
+  
+    expect(newState.categories.length).toBe(2);
+    expect(initialState.categories.length).toBe(1);
+  });
